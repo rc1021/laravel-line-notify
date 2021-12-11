@@ -5,6 +5,8 @@ namespace Hinaloe\LineNotify\Channel;
 use GuzzleHttp\Client as HttpClient;
 use Hinaloe\LineNotify\Message\LineMessage;
 use Illuminate\Notifications\Notification;
+use Hinaloe\LineNotify\Exceptions\CouldNotSendNotificationException;
+use Hinaloe\LineNotify\Exceptions\RouteNotificationForException;
 
 class LineChannel
 {
@@ -30,12 +32,16 @@ class LineChannel
     public function send($notifable, Notification $notification)
     {
         if (!$token = $notifable->routeNotificationFor('line')) {
-            return;
+            throw RouteNotificationForException::methodHasNotBeenAnnounced();
         }
-        $this->http->post($this->endpoint, $this->buildRequest(
+        $response = $this->http->post($this->endpoint, $this->buildRequest(
             $notification->toLine($notifable),
             $token
         ));
+
+        if ($response->getStatusCode() !== 200) {
+            throw CouldNotSendNotificationException::serviceRespondedWithAnError($response);
+        }
     }
 
     /**
