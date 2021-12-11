@@ -1,6 +1,6 @@
 <?php
 
-namespace Hinaloe\LineNotify\Exceptions;
+namespace Rc1021\LineNotify\Exceptions;
 
 class RouteNotificationForException extends \Exception
 {

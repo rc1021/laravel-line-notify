@@ -1,6 +1,6 @@
 <?php
 
-namespace Hinaloe\LineNotify\Message;
+namespace Rc1021\LineNotify\Message;
 
 /**
  * Class LineMessage
