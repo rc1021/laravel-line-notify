@@ -1,6 +1,6 @@
 {
-  "name": "hinaloe/laravel-line-notify",
-  "description": "LINE Notify Provider for Laravel 5 notification",
+  "name": "rc1021/laravel-line-notify",
+  "description": "LINE Notify Provider for Laravel notification",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "license": "MIT",
@@ -8,6 +8,10 @@
     {
       "name": "hinaloe",
       "email": "hina@hinaloe.net"
+    },
+    {
+      "name": "Hsu Yi Ming",
+      "email": "rc.701021@gmail.com"
     }
   ],
   "require": {
@@ -18,7 +22,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Hinaloe\\LineNotify\\": "src/"
+      "Rc1021\\LineNotify\\": "src/"
     }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Rc1021\\LineNotify\\LineNotifyServiceProvider"
+          ]
+      }
   }
 }

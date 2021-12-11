@@ -1,8 +1,8 @@
 <?php
 
-namespace Hinaloe\LineNotify;
+namespace Rc1021\LineNotify;
 
-use Hinaloe\LineNotify\Channel\LineChannel;
+use Rc1021\LineNotify\Channel\LineChannel;
 use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\ServiceProvider;
 

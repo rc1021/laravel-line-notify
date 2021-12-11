@@ -1,12 +1,12 @@
 <?php
 
-namespace Hinaloe\LineNotify\Channel;
+namespace Rc1021\LineNotify\Channel;
 
 use GuzzleHttp\Client as HttpClient;
-use Hinaloe\LineNotify\Message\LineMessage;
+use Rc1021\LineNotify\Message\LineMessage;
 use Illuminate\Notifications\Notification;
-use Hinaloe\LineNotify\Exceptions\CouldNotSendNotificationException;
-use Hinaloe\LineNotify\Exceptions\RouteNotificationForException;
+use Rc1021\LineNotify\Exceptions\CouldNotSendNotificationException;
+use Rc1021\LineNotify\Exceptions\RouteNotificationForException;
 
 class LineChannel
 {

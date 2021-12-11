@@ -1,4 +1,4 @@
-## Laravel5 LINE Notify Provider
+## Laravel LINE Notify Provider
 
 [LINE Notify](https://notify-bot.line.me) Provider for Laravel 5.3+ Notification.
 
@@ -12,10 +12,8 @@
 1. install package
 
     ```
-    $ composer require hinaloe/laravel-line-notify
+    $ composer require rc1021/laravel-line-notify
     ```
-
-1. Add `\Hinaloe\LineNotify\LineNotifyServiceProvider` to `config/app.php` or like.
 
 1. Make notifable class (ex User Model entity)
 
@@ -38,7 +36,7 @@
         */
        protected function routeNotificationForLine()
        {
-           return 'hogehogehoge';
+           return '{LINE Notify OAuth2 token}';
        }
    }
     
@@ -55,7 +53,7 @@
     use Illuminate\Bus\Queueable;
     use Illuminate\Contracts\Queue\ShouldQueue;
     use Illuminate\Notifications\Notification;
-    use Hinaloe\LineNotify\Message\LineMessage;
+    use Rc1021\LineNotify\Message\LineMessage;
     
     class NewUserNotification extends Notification// implements ShouldQueue
     {
